@@ -38,7 +38,7 @@ https://github.com/ch32-rs/wlink
 # Run the application
 make
 make clean
-# Running make also flashes the project automaticaly
+# Running make also flashes the project automatically
 ```
 
 ## References
@@ -46,4 +46,4 @@ make clean
 this project is based on: \
 `https://github.com/openwch/ch32v307` \
 and inspired by: \
-`https://github.com/cnlohr/ch32v003fun` \
+`https://github.com/cnlohr/ch32v003fun`
