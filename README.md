@@ -11,7 +11,7 @@ Makefile:
 ```make
 all: flash
 
-TARGET:={path to your project Folder}
+TARGET:=./examples/gpio/
 
 include ../../ch32v307.mk
 
@@ -43,7 +43,7 @@ make clean
 
 ## References
 
-this project is based on:
-`https://github.com/openwch/ch32v307`
-and inspired by:
-`https://github.com/cnlohr/ch32v003fun`
+this project is based on: \
+`https://github.com/openwch/ch32v307` \
+and inspired by: \
+`https://github.com/cnlohr/ch32v003fun` \
