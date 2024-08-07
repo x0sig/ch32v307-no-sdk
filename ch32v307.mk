@@ -6,7 +6,7 @@ OBJ_DIR := $(CURRENT_DIR)obj
 INC_DIR := $(CURRENT_DIR)inc
 
 # Header files
-LIBS += -I$(INC_DIR)
+LIBS := -I$(INC_DIR)
 # Source files
 SRCS := $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/*.S)
 # Object files
@@ -30,11 +30,14 @@ main.o: main.c
 main.elf: $(OBJS) main.o
 	$(CC) -march=rv32imac_zicsr -mabi=ilp32 -msmall-data-limit=8 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T link.ld -nostartfiles -Xlinker --gc-sections -L"$(CURRENT_DIR)" --specs=nano.specs --specs=nosys.specs -o "$@" main.o $(OBJS) $(LIBS)
 
+obj/:
+	@mkdir -p $(OBJ_DIR)
+
 cv_clean:
 	rm -f $(OBJ_DIR)/*
 	rm -f main.elf main.d main.o
 
-cv_flash: main.elf
+cv_flash: obj/ main.elf
 	@wlink flash main.elf
 
 .PHONY: cv_clean cv_flash
