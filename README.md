@@ -19,6 +19,13 @@ flash: cv_flash
 clean: cv_clean
 ```
 
+## Dependencies
+
+it uses the riscv-compiler: \
+`https://github.com/xpack-dev-tools/riscv-none-elf-gcc-xpack` \
+and the flasher tool: \
+`https://github.com/ch32-rs/wlink`
+
 ## Installation
 
 ```bash
@@ -26,14 +33,7 @@ clean: cv_clean
 git clone https://github.com/x0sig/ch32v307-no-sdk
 
 # Navigate into the directory
-cd ch32v307-no-sdk
-
-# Install dependencies
-
-# it uses the riscv-compiler:
-https://github.com/xpack-dev-tools/riscv-none-elf-gcc-xpack
-# and the flasher tool:
-https://github.com/ch32-rs/wlink
+cd ./ch32v307-no-sdk/examples/gpio
 
 # Run the application
 make
