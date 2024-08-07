@@ -5,7 +5,7 @@
 ## Description
 
 This is a minimal build-environment to programm the ch32v3007.
-Just create a new folder for you project copy the minimal Makefile and done.
+Just create a new folder for your project, copy the minimal Makefile and done.
 
 Makefile:
 ```make
