@@ -1,6 +1,6 @@
 all: flash
 
-TARGET:=./examples/gpio_toggle/
+TARGET:=./examples/gpio/
 
 include ../../ch32v307.mk
 
