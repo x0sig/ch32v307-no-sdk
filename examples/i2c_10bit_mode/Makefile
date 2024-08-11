@@ -1,6 +1,6 @@
 all: flash
 
-TARGET:=./examples/gpio/
+TARGET:=./examples/i2c_10bit_mode/
 
 include ../../ch32v307.mk
 
